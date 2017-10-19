@@ -1,0 +1,19 @@
+<section>
+  <h1>Clientes en sistema, Capital: {{ vm.capital | currency }}</h1>
+  <table class="table table-bordered table-hover text-center">
+    <thead>
+      <th>Nombre</th>
+      <th>Correo Electrónico</th>
+      <th>Monto total Deuda</th>
+      <th>Acciones</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="client in vm.clients">
+        <td> {{ client.nombre }} </td>
+        <td> {{ client.email }} </td>
+        <td> {{ vm.calculateCuote(client.cuotas) | currency }} </td>
+        <td> <button class="btn btn-primary btn-sm" ng-click="vm.payCuote(client.cuotas)"><span class="glyphicon glyphicon-print"></span></button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

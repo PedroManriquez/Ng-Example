@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Libraries inject, CSS, AngularJS and modules -->
+  <link rel="stylesheet" href="src/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+  <!-- End Libraries inject -->
+</head>
+<!-- ng-app defined, name: application -->
+<body ng-app="application">
+  <!-- navBar component instance -->
+  <nav-bar></nav-bar> 
+  <!-- UI router instance, is a SPA -->
+  <section class="content well">
+    <ui-view></ui-view>
+  </section>
+  <!-- Script inject, components, controllers, etc -->
+  <script src="src/index.js"></script>
+  <script src="src/routes.js"></script>
+  <script src="src/app/base.component.js"></script>
+  <script src="src/app/components/NavBar/navBar.component.js"></script>
+  <script src="src/app/components/client/client.component.js"></script>
+  <!-- End script inject -->
+</body>
+</html>
